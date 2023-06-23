@@ -10,6 +10,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@mdi/js": "^7.2.96",
+    "@mdi/react": "^1.6.1",
     "vue": "^3.3.2",
     "vue-material-design-icons": "^5.2.0"
   },

@@ -1,7 +1,18 @@
 <script setup>
 import MMesage from '@/components/MMesage.vue';
+
 import mButton from '@/components/mButton.vue';
+
+import deleteforever from 'vue-material-design-icons/DeleteForever.vue'
+
+import cartoff from 'vue-material-design-icons/CartOff.vue'
+
+import star from 'vue-material-design-icons/Star.vue'
+
+import cartvariant from 'vue-material-design-icons/CartVariant.vue'
+
 import {carrinho, atualizaQuantidadeItem, removerItemCarrinho} from '@/_data/carrinho.js'
+
 
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
@@ -43,10 +54,10 @@ function formatarPreco(preco) {
             </div>
           </div>
         </div>
-        <m-button texto="Limpar"/>
-        <m-button texto="Fechar Carrinho"/>
-        <m-button texto="Favoritos"/>
-        <m-button texto="Continar Comprando"/>
+        <m-button class="limpar" texto="Limpar"> <deleteforever/> Limpar </m-button>
+        <m-button class="fechar" texto="Fechar Carrinho"> <cartoff/> Fechar Carrinho </m-button>
+        <m-button class="fav" texto="Favoritos"> <star/> Favoritos </m-button>
+        <m-button class="continue" texto="Continar Comprando"> <cartvariant/> Contimuar Comprando </m-button>
         <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
       </div>
     </div>
@@ -105,6 +116,22 @@ function formatarPreco(preco) {
 .icon-capa-livro {
   width: 30px;
   margin-right: 10px;
+}
+
+.limpar {
+  background-color: #dc3545;
+}
+
+.fechar {
+  background-color: #c82333;
+}
+
+.fav {
+  background-color: #ffc107;
+}
+
+.continue {
+  background-color: #218838;
 }
 
 </style>
